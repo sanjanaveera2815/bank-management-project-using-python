@@ -74,7 +74,14 @@ class Bank:
                 userdata[0]['balance'] -= amount
                 Bank._update()
                 print("Amount withdraw successfully")        
-    
+    def showdetails(self):
+
+        accnumber = input("please tell your account  number")
+        pin = int(input("please tell your pin"))
+        userdata = [i for i in Bank.data if i['accountNo.'] == accnumber and i['pin'] == pin]
+        print(" your information are \n\n\n")
+        for i in userdata[0]:
+            print(f"{i} : ")
     
     
               
